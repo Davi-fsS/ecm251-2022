@@ -1,6 +1,6 @@
 #Requisitos iniciais para o projeto anual
 
-```
+<html>
 <h1>Objetivo: Desenvolvimento de uma plataforma de venda de jogos.</h1>
 
 <div>
@@ -8,4 +8,4 @@
     </br>
     <p>A partir da análise UX/UI</p>
 </div>
-```
+</html>
