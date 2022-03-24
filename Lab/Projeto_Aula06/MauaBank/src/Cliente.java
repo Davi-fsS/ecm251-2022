@@ -5,14 +5,12 @@ public class Cliente {
     private String cpf;
     private String nome;
     private String email;
-    private Conta conta;      //convenção de chamar um objeto Conta de "conta"
 
     //Constructor !
-    public Cliente(String nome, String cpf, String email, Conta conta){
+    public Cliente(String nome, String cpf, String email){
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
-        this.conta = conta;
     }
 
     //Métodos 
@@ -21,7 +19,6 @@ public class Cliente {
         System.out.println("Nome: "+nome);
         System.out.println("CPF: "+cpf);
         System.out.println("E-mail: "+email);
-        System.out.println("Conta: "+conta);
     }
 
     //Getters
@@ -36,10 +33,6 @@ public class Cliente {
 
     public String getEmail(){
         return email;
-    }
-
-    public Conta getConta(){
-        return conta;
     }
 
     //Setters

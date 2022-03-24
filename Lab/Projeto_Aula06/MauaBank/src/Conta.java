@@ -3,11 +3,13 @@ public class Conta {
     //Atributos de nossa classe
     private int numero;                  //privando de serem instanciados no app
     private double saldo;
+    private Cliente cliente;
 
     //Constructor !
-    public Conta(int numero){
+    public Conta(int numero,Cliente cliente){
         this.numero = numero;
         saldo = 0;
+        this.cliente = cliente;
     }
 
     //Métodos de nossa classe
@@ -16,8 +18,8 @@ public class Conta {
         System.out.println("Saldo: "+this.saldo);
     }
 
-    public void visualizarSaldo(){
-        System.out.println("Saldo atual: "+this.saldo);
+    public String visualizarSaldo(){
+        return "R$ "+ String.format("R$ %.2f",saldo);
     }
 
     public boolean depositar(double dinheiro){
@@ -37,5 +39,11 @@ public class Conta {
         if(!sacar(dinheiro)) return false;
         if(!destino.depositar(dinheiro)) return false;
         return true;
+    }
+
+    public String toString(){
+        return "Conta Número: " + numero + 
+        "\nSaldo: " + visualizarSaldo() + 
+        "\nCliente: " + cliente.getNome();
     }
 }
