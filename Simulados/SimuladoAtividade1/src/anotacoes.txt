@@ -1,0 +1,13 @@
+- prototipo de pagamento utlizando apenas QR codes
+    - realizar e receber
+
+- usuario 
+    - vai ter uma CONTA (receber creditos de outros e realizar 
+    pagamentos por QR codes)
+    - infos do QR Code serão do tipo "String"
+
+- realização de pagamento (usuarioDestino -> valor e QRCode)
+    - quando receber algum valor, ele deve gerar a chave de
+    autorização da transação 
+
+
