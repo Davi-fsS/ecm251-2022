@@ -7,14 +7,14 @@ public class Atividade1 {
         usuario1.getConta().depositar(1000);
         usuario2.getConta().depositar(250);
         usuario3.getConta().depositar(3000);
-
-        String qrCode1 = Transacoes.gerarQrCode(usuario1.getConta().getIdConta(), usuario1.getNome(), 250);        //estudar isso
+ 
+        String qrCode1 = Transacoes.gerarQrCode(usuario1.getConta().getIdConta(), usuario1.getNome(), 250);              //gera operação de recebimento, ou seja, gera qrCode a ser pago para ele
         
-        System.out.println("Transacao 1:"+usuario2.getConta().transferir(extrairValorQrCode(qrCode1),usuario1.getConta()));
-        System.out.println("Transacao 2:"+usuario3.getConta().transferir(extrairValorQrCode(qrCode1),usuario1.getConta()));
-        System.out.println("Transacao 3:"+usuario2.getConta().transferir(extrairValorQrCode(qrCode1),usuario1.getConta()));
+        System.out.println("Transacao 1:"+usuario2.getConta().transferir(extrairValorQrCode(qrCode1),usuario1.getConta()));      //pega a conta do pagante.transferir(valor,destino)
+        System.out.println("Transacao 2:"+usuario3.getConta().transferir(extrairValorQrCode(qrCode1),usuario1.getConta()));      //valor é utilizado pela extração do método qrCode, onde o método split com [2] 
+        System.out.println("Transacao 3:"+usuario2.getConta().transferir(extrairValorQrCode(qrCode1),usuario1.getConta()));      //indica o valor do qrCode gerado
 
-        String qrCode2 = Transacoes.gerarQrCode(usuario2.getConta().getIdConta(), usuario2.getNome(), 1000);        //estudar isso
+        String qrCode2 = Transacoes.gerarQrCode(usuario2.getConta().getIdConta(), usuario2.getNome(), 1000);            //gera operação de recebimento, ou seja, gera qrCode a ser pago para ele
         System.out.println("Transacao 4:"+usuario3.getConta().transferir(extrairValorQrCode(qrCode2), usuario2.getConta()));
 
     }
