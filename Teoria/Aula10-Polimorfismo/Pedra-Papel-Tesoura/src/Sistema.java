@@ -1,9 +1,10 @@
+import java.rmi.server.SocketSecurityException;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Sistema {
     public static void rodar(){
         //Usuario escolhe a jogada
-        Jogada jogada1 = new Tesoura();
+        Jogada jogada1 = new Spock();
         
         //Sorteio da jogada para o PC
         Jogada jogada2 = sortearJogada();
@@ -13,6 +14,8 @@ public class Sistema {
 
         //Exibição do resultado
         System.out.println("Resultado: "+resultado);
+
+        
     }
 
     private static String avaliaJogadas(Jogada jogada1, Jogada jogada2){
@@ -24,10 +27,12 @@ public class Sistema {
     }
 
     private static Jogada sortearJogada(){
-        Jogada jogadas[] = new Jogada[3];
+        Jogada jogadas[] = new Jogada[5];
         jogadas[0] = new Pedra();
         jogadas[1] = new Papel();
         jogadas[2] = new Tesoura();
+        jogadas[3] = new Spock();
+        jogadas[4] = new Lagarto();
         return jogadas[ThreadLocalRandom.current().nextInt(jogadas.length)];             //sorteia uma das jogadas aleatoriamente
     }
 }
