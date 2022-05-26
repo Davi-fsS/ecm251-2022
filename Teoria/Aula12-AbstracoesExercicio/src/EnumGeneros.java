@@ -1,0 +1,3 @@
+public enum EnumGeneros {
+    ROMANCE, COMEDIA, BEST_SELLER, MOTIVACIONAL, TECNOLOGIA, DIREITO; 
+}
