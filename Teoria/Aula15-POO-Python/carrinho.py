@@ -19,7 +19,14 @@ class Carrinho():
         self._item.append(item)
 
     def remover(self,item):
-        if item in self._item:
+        for item in self._item:
             self._item.remove(item)
+        
+    def exibir_itens(self):
+        i = 0
+        while(i < len(self._item)):
+            print(self._item[i])
+            i+=1
+            
             
         

@@ -17,7 +17,7 @@ class Item():
         return self._valor
 
     def __str__(self) -> str:
-        return self._nome + str(self._valor)
+        return self._nome
     
     def __eq__(self, __o: object) -> bool:
         if(isinstance(__o, Item)):
