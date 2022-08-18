@@ -1,7 +1,7 @@
 from ast import iter_child_nodes
 from tokenize import Double
-from item import Item
-from carrinho import Carrinho
+from modelos.produtos.item import Item
+from modelos.carrinho.carrinho import Carrinho
 
 # item1 = Item('Carregador', 'carrega iphone e android', 200.0)
 
