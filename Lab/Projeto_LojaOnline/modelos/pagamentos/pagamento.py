@@ -7,4 +7,3 @@ class Pagamento(ABC):
     def realizar_pagamento(self):
         pass
 
-    
