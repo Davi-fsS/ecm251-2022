@@ -1,4 +1,4 @@
-#Código para escrever dados em um arquivo
+#Código para escrever dados em um arquivoo
 
 import os
 from traceback import print_stack
