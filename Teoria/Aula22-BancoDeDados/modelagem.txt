@@ -1,0 +1,38 @@
+Modelagem Conceitual
+
+- Peter Chen : {
+    Diagrama de Chen: forma de representação ,
+    relacionamentos : forma como as tabelas se interligam ,
+    cardinalidade: forma como as relações são criadas
+}
+
+1) Entidade
+    - representação de algo, equivalente a uma classe. É uma tabela.
+
+2) Atributo
+    - atributos de uma classe. São as colunas da tabela
+
+Portanto, vamos utilizar 3 entidades.
+
+Entidade 1: JOGO
+    - Atributos: nome, categoria, classificação, quantidade, SKU, ano, preço, região, descricao
+
+Entidade 2: PLATAFORMA
+    - Atributos: nome, fabricante, ano
+
+Entidade 3: FABRICANTE 
+    - Atributos: nome, origem
+   
+Sobre relacionamento: 
+
+JOGO --<>-- PLATAFORMA
+JOGO --<>-- FABRICANTE 
+
+Sobre a cardinalidade:
+
+JOGO (1,N) --<>-- (1,N) PLATAFORMA
+JOGO (1,1) --<>-- (1,N) FABRICANTE
+
+*********
+comandos SQL: https://www.notion.so/Aula-22-Banco-de-Dados-f6da5cb68f1b4e1bb37ea19cfa27506a
+*********
