@@ -1,4 +1,7 @@
+from unittest import result
 from src.controllers.pedido_controller import PedidoController
+from src.models.pedido import Pedido
+
 controller = PedidoController()
 
 #Exibe os itens de um pedido
@@ -12,5 +15,19 @@ item_pedido.data_hora = '25/10/2022'
 controller.atualizar_pedido(item_pedido)
 
 print("***********************")
+for elemento in resultado:
+    print(elemento)
+
+print('******************')
+pedido = Pedido(id='151',id_item='10',id_cliente='ZEZE',data_hora='26/10/2022',numero_pedido='1234',quantidade=2)
+controller.inserir_pedido(pedido)
+resultado = controller.pegar_pedido(numero_pedido='1234')
+for elemento in resultado:
+    print(elemento)
+print("**********************")
+for elemento in resultado:
+    print(controller.deletar_pedido(elemento.id))
+
+resultado = controller.pegar_pedido(numero_pedido='1234')
 for elemento in resultado:
     print(elemento)
