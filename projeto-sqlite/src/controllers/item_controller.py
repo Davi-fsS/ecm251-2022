@@ -15,7 +15,7 @@ class ItemController:
             return False
         return True
 
-    def pegar_todos_itens(self) -> list[Item]:
+    def pegar_todos_itens(self):
         itens = ItemDAO.get_instance().get_all()
         return itens
     
@@ -25,6 +25,6 @@ class ItemController:
     def deletar_item(self, id) -> bool:
         return ItemDAO.get_instance().deletar_item(id)
     
-    def buscar_todos_itens_nome(self, nome) -> list[Item]:
+    def buscar_todos_itens_nome(self, nome):
         itens = ItemDAO.get_instance().search_all_for_name(nome)
         return itens

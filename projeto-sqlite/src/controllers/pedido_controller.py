@@ -1,4 +1,6 @@
+from os import listdir
 from src.dao.pedido_dao import PedidoDAO
+from src.models.pedido import Pedido
 from src.controllers.item_controller import ItemController
 
 class PedidoController:
@@ -12,3 +14,9 @@ class PedidoController:
             item = ItemController.pegar_item(item_id)
             total += item.preco * quantidade
         return total
+
+    def pegar_pedido(self,numero_pedido):
+        return PedidoDAO.get_instance().pegar_pedido(numero_pedido)
+
+    def atualizar_pedido(self,pedido) -> bool:
+        return PedidoDAO.get_instance().atualizar_pedido(pedido)
