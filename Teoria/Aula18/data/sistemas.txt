@@ -1,0 +1,4 @@
+Kali
+Fedora
+linux
+windows
